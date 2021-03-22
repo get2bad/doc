@@ -8,11 +8,9 @@
 
 代码仓库：
 
- [老王的github](https://www.github.com/get2bad)
+[设计模式代码仓库](https://github.com/get2bad/java_design_mode)
 
- [老王的gitee](https://www.gitee.com/get2bad)
-
-
+[力扣算法代码仓库](https://github.com/get2bad/leetcode-algorithm)
 
 【更新】
 
