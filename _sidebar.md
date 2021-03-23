@@ -1,4 +1,3 @@
-
 * Java设计模式
 
   * [设计模式介绍](./docs/设计模式/Java设计模式-介绍.md)
@@ -11,9 +10,10 @@
   * [适配器模式](./docs/设计模式/Java设计模式-适配器模式.md)
   * [桥接模式](./docs/设计模式/Java设计模式-桥接模式.md)
   * [外观模式](./docs/设计模式/Java设计模式-外观模式.md)
+  * [享元模式](./docs/设计模式/Java设计模式-享元模式.md)
 
-+ LeetCode力扣算法
-  + [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
-  + [同构字符串[<font color=green>简单</font>]](./docs/算法/同构字符串.md)
-  + [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
+* LeetCode力扣算法
+  * [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
+  * [同构字符串[<font color=green>简单</font>]](./docs/算法/同构字符串.md)
+  * [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
 

@@ -14,7 +14,9 @@
 
 【更新】
 
-2021-03-22 力扣LeetCode 每日一题 [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
+2021-03-23 Java设计模式 [享元模式](./docs/设计模式/Java设计模式-享元模式.md)
+
+2021-03-23 力扣LeetCode 每日一题 [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
 
 2021-03-22 Java设计模式 [外观模式](./docs/设计模式/java设计模式-外观模式.md)
 
