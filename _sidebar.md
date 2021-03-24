@@ -11,6 +11,7 @@
   * [桥接模式](./docs/设计模式/Java设计模式-桥接模式.md)
   * [外观模式](./docs/设计模式/Java设计模式-外观模式.md)
   * [享元模式](./docs/设计模式/Java设计模式-享元模式.md)
+  * [代理模式](./docs/设计模式/Java设计模式-代理模式.md)
 
 * LeetCode力扣算法
   * [132模式[<font color=orange>中等</font>]](./docs/算法/132模式.md)
