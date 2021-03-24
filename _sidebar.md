@@ -13,6 +13,7 @@
   * [享元模式](./docs/设计模式/Java设计模式-享元模式.md)
 
 * LeetCode力扣算法
+  * [132模式[<font color=orange>中等</font>]](./docs/算法/132模式.md)
   * [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
   * [同构字符串[<font color=green>简单</font>]](./docs/算法/同构字符串.md)
   * [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)

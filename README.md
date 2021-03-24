@@ -14,6 +14,8 @@
 
 【更新】
 
+2021-03-24 力扣LeetCode 每日一题 [132模式[<font color=orange>中等</font>]](./docs/算法/132模式.md)
+
 2021-03-23 Java设计模式 [享元模式](./docs/设计模式/Java设计模式-享元模式.md)
 
 2021-03-23 力扣LeetCode 每日一题 [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
