@@ -14,6 +14,7 @@
   * [代理模式](./docs/设计模式/Java设计模式-代理模式.md)
 
 * LeetCode力扣算法
+  * [删除排序链表中的重复元素II[<font color=orange>中等</font>]](./docs/算法/删除排序链表中的重复元素.md)
   * [132模式[<font color=orange>中等</font>]](./docs/算法/132模式.md)
   * [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
   * [同构字符串[<font color=green>简单</font>]](./docs/算法/同构字符串.md)
