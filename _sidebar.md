@@ -12,11 +12,16 @@
   * [外观模式](./docs/设计模式/Java设计模式-外观模式.md)
   * [享元模式](./docs/设计模式/Java设计模式-享元模式.md)
   * [代理模式](./docs/设计模式/Java设计模式-代理模式.md)
-
 * LeetCode力扣算法
-  * [删除排序链表中的重复元素II[<font color=orange>中等</font>]](./docs/算法/删除排序链表中的重复元素.md)
-  * [132模式[<font color=orange>中等</font>]](./docs/算法/132模式.md)
-  * [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
-  * [同构字符串[<font color=green>简单</font>]](./docs/算法/同构字符串.md)
-  * [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
+  * 中等
+    * [搜索二维矩阵[<font color=orange>中等</font>]](./docs/算法/搜索二维矩阵.md)
+    * [删除排序链表中的重复元素II[<font color=orange>中等</font>]](./docs/算法/删除排序链表中的重复元素.md)
+    * [132模式[<font color=orange>中等</font>]](./docs/算法/132模式.md)
+    * [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
+    * [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
+  * 简单
+    * [数组的度[<font color=green>简单</font>]](./docs/算法/数组的度.md)
+    * [合并两个有序链表[<font color=green>简单</font>]](./docs/算法/合并两个有序链表.md)
+    * [翻转图片[<font color=green>简单</font>]](./docs/算法/翻转图片.md)
+    * [同构字符串[<font color=green>简单</font>]](./docs/算法/同构字符串.md)
 
