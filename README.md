@@ -14,7 +14,9 @@
 
 【更新】
 
-2021-04-01 <font color=pink>愚人节~~</font> 力扣LeetCode 每日一题 [笨阶乘[<font color=orange>中等</font>]](./docs/算法/笨阶乘.md)
+2021-04-01 <font color=blue>愚人节~~</font> [HDFS学习笔记](./docs/大数据/HDFS学习笔记.md)
+
+2021-04-01 <font color=blue>愚人节~~</font> 力扣LeetCode 每日一题 [笨阶乘[<font color=orange>中等</font>]](./docs/算法/笨阶乘.md)
 
 2021-03-31 力扣LeetCode 每日一题 [子集II[<font color=orange>中等</font>]](./docs/算法/子集II.md)
 
