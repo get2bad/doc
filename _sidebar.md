@@ -14,6 +14,7 @@
   * [代理模式](./docs/设计模式/Java设计模式-代理模式.md)
 * LeetCode力扣算法
   * 中等
+    * [笨阶乘[<font color=orange>中等</font>]](./docs/算法/笨阶乘.md)
     * [子集II[<font color=orange>中等</font>]](./docs/算法/子集II.md)
     * [搜索二维矩阵[<font color=orange>中等</font>]](./docs/算法/搜索二维矩阵.md)
     * [删除排序链表中的重复元素II[<font color=orange>中等</font>]](./docs/算法/删除排序链表中的重复元素.md)
