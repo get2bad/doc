@@ -16,6 +16,8 @@
   * [享元模式](./docs/设计模式/Java设计模式-享元模式.md)
   * [代理模式](./docs/设计模式/Java设计模式-代理模式.md)
 * LeetCode力扣算法
+  * 困难
+    * [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
   * 中等
     * [笨阶乘[<font color=orange>中等</font>]](./docs/算法/笨阶乘.md)
     * [子集II[<font color=orange>中等</font>]](./docs/算法/子集II.md)
