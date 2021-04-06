@@ -14,7 +14,7 @@
 
 【更新】
 
-2021-04-06 力扣LeetCode 每日一题 [按摩师[<font color=green>简单</font>]](./docs/算法/按摩师.md)
+2021-04-06 力扣LeetCode 动态规划专题 - [按摩师[<font color=green>简单</font>]](./docs/算法/按摩师.md)
 
 2021-04-02 力扣LeetCode 每日一题 [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
 
