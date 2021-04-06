@@ -121,7 +121,8 @@ CombineTextInputFormat.setMaxInputSplitSize(job, 4194304);// 4m
 1. 因为 a.txt 小于默认的 4MB，单独切一片
 2. 因为b.txt 大于默认的4MB，但是小于 2 * 4MB ，所以直接一分为二 每一片为 2.55MB
 3. 因为c.txt小于默认的4MB，所以单独切一片
-4. 因为d.txt大于默认的4MB，但是小于 2 * 4MB，所以直接一分为二，每一篇为 3.4MB
+4. 因为d.txt大于默认的4MB，但是小于 2 * 4MB，所以直接一分为二，每一片为 3.4MB
+5. 最终会合并为 (1.7 + 2.55)M + (2.55 + 3.4)M + (3.4+3.4)M的组合
 
 
 
@@ -280,7 +281,7 @@ public class SequenceFileDriver {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 		
        // 输入输出路径需要根据自己电脑上实际的输入输出路径设置
-		args = new String[] { "e:/input/inputinputformat", "e:/output1" };
+		args = new String[] { "/usr/input/inputinputformat", "/usr/output1" };
 
        // 1 获取job对象
 		Configuration conf = new Configuration();
@@ -538,4 +539,301 @@ public class WordcountCombiner extends Reducer<Text, IntWritable, Text,IntWritab
 ```java
 job.setCombinerClass(WordcountCombiner.class);
 ```
+
+
+
+## MapTask机制
+
+![](http://image.tinx.top/img20210406143345.png)
+
+1. Read阶段：MapTask通过用户编写的RecordReader,从输入InputSplit中解析出一个个key/value
+
+2. Map阶段：该节点主要是将解析出的key/value交给用户编写map()函数处理，并产生一系列新的key/value
+
+3. Collect阶段：在用户编写的map()函数中，当数据处理完成后，一般会调用OutputCollector.collect()输出结果。在该函数背部，他将会产生key/value分区(调用Paritioner)，并写入一个环形内存缓冲区
+
+4. Spill阶段：即"溢写"，当环形缓冲区放满后，MapReduce将数据写到本地磁盘上，生成一个临时文件。需要注意的是，将数据写入本地磁盘以前，先要对数据进行一次本地排序，并在必要时对数据进行合并，、压缩等操作
+
+   溢写阶段详情：
+
+   1. 利用快速排序算法对缓存区内的数据进行排序，排序方式是，先按照分区编号Partition进行排序，然后按照key进行排序，这样，经过排序以后，数据以分区为单位聚集在一起，并且在同一分区内所有数据按照key进行排序
+   2. 按照分区编号由小到大依次将每个分区中的数据写入任务工作目录下的临时文件output/spillN.out中，如果用户设置了Combiner，则写入文件以前，对每个分区中的数据进行一次聚集操作
+   3. 将分区数据的原信息写到内存索引数据结构SpillRecord中，其中每个分区的原信息包括在临时文件中的偏移量，压缩前数据大小和压缩后的数据大小。如果当前内存索引大小超过1MB，则将内存索引写到文件output/spillN.out.index中。
+
+5. Combine阶段：当所有数据处理完成以后，MapTask对所有临时文件进行一次合并，以确保最终只会生成一个数据文件
+
+当所有数据处理完后，MapTask会将所有临时文件合并成一个大文件，并保存到文件output/file.out中，同时生成相应的索引文件output/file.out.index。
+
+在进行文件合并过程中，MapTask以分区为单位进行合并。对于某个分区，它将采用多轮递归合并的方式。每轮合并io.sort.factor（默认10）个文件，并将产生的文件重新加入待合并列表中，对文件排序后，重复以上过程，直到最终得到一个大文件。
+
+让每个MapTask最终只生成一个数据文件，可避免同时打开大量文件和同时读取大量小文件产生的随机读取带来的开销。
+
+
+
+## ReduceTask工作机制
+
+![image-20210406145936492](/Users/wangshuai/Library/Application Support/typora-user-images/image-20210406145936492.png)
+
+1. Copy阶段： ReduceTask从各个MapTask上远程拷贝一片数据，并针对某一片数据，如果其大小超过一定阈值，则写到磁盘上，否则直接写到内存中
+2. Merge阶段： 在远程拷贝数据的同时，ReduceTask启动了两个后台线程对内存和磁盘上的文件进行合并，以防止内存使用过多或磁盘上文件过多
+3. Sort阶段： 按照MapReduce语义，用户编写reduce()函数输入数据是按key进行聚集的一组数据，为了将key相同的数据聚在一起，Hadoop采用了基于排序的策略，由于各个MapTask已经实现对自己的处理结果进行了局部排序，因此，ReduceTask只需对所有数据进行一次归并排序即可。
+4. Reduce阶段： reduce()0函数将计算结果写到HDFS上
+
+### 设置ReduceTask并行度（个数）
+
+ReduceTask的并行度同样影响整个Job的执行并发度和执行效率，但与MapTask的并发数由切片数决定不同，ReduceTask数量的决定是可以直接手动设置：
+
+~~~java
+// 默认值是1，手动设置为4
+job.setNumReduceTasks(4);
+~~~
+
+### ReduceTask注意事项
+
+1. ReduceTask=0 表示没有reduce阶段，输出文件个数和Map个数一致
+
+2. ReduceTask默认值就是1，所以输出文件个数为1个
+
+3. 如果数据分布不均匀，就有可能在Reduce阶段发生数据倾斜
+
+4. ReduceTask数量并不是任意设置，还要考虑业务逻辑需求，有些情况下，需要计算全局汇总结果，就只能有一个ReduceTask
+
+5. 具体多少个ReduceTask，需要根据集群性能而定
+
+6. 如果分区不是1，但是ReduceMTask为1，是否执行分区过程？
+
+   > 不执行分区过程。因为MapTask的源码中，执行分区的前提是先判断ReduceNum个数是否大于1.不大于1肯定不执行。
+
+
+
+## OutputFormat数据输出
+
+> OutputFormat是MapReduce输出的基类，所有实现MapReduce输出都实现了OutputFormat接口
+
+### TextOutputFormat
+
+默认的输出格式是 TextOutputFormat，**他把每条记录写为文本行**。他的键和值可以使任意类型，因为TextOutputFormat调用toString()方法把他们转换为字符串
+
+
+
+### SequenceFileOutputFormat
+
+将SequenceFileOutputFormat输出**作为后续MapReduce任务的输入**，这便是一种好的输出格式，以为它的格式更加 紧凑，因容易被压缩
+
+
+
+### 自定义 outputFormat
+
+1. 自定义一个类继承FileOutputFormat
+2. 改写RecordWriter，具体改写输出数据的方法write()
+
+
+
+## 压缩
+
+### 基本原则
+
+1. 运算密集型job，少用压缩
+2. IO密集型job，多用压缩
+
+### MapReduce支持的压缩编码
+
+| 压缩格式 | hadoop自带？ | 算法    | 文件扩展名 | 是否可切分 | 换成压缩格式后，原来的程序是否需要修改 |
+| -------- | ------------ | ------- | ---------- | ---------- | -------------------------------------- |
+| DEFLATE  | 是，直接使用 | DEFLATE | .deflate   | 否         | 和文本处理一样，不需要修改             |
+| Gzip     | 是，直接使用 | DEFLATE | .gz        | 否         | 和文本处理一样，不需要修改             |
+| bzip2    | 是，直接使用 | bzip2   | .bz2       | 是         | 和文本处理一样，不需要修改             |
+| LZO      | 否，需要安装 | LZO     | .lzo       | 是         | 需要建索引，还需要指定输入格式         |
+| Snappy   | 否，需要安装 | Snappy  | .snappy    | 否         | 和文本处理一样，不需要修改             |
+
+#### 编码/解码器
+
+| 压缩格式 | 对应的编码/解码器                          |
+| -------- | ------------------------------------------ |
+| DEFLATE  | org.apache.hadoop.io.compress.DefaultCodec |
+| gzip     | org.apache.hadoop.io.compress.GzipCodec    |
+| bzip2    | org.apache.hadoop.io.compress.BZip2Codec   |
+| LZO      | com.hadoop.compression.lzo.LzopCodec       |
+| Snappy   | org.apache.hadoop.io.compress.SnappyCodec  |
+
+要在Hadoop中启用压缩，可以配置如下参数：
+
+| 参数                                                         | 默认值                                                       | 阶段        | 建议                                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ----------- | --------------------------------------------- |
+| io.compression.codecs  （在core-site.xml中配置）             | org.apache.hadoop.io.compress.DefaultCodec, org.apache.hadoop.io.compress.GzipCodec, org.apache.hadoop.io.compress.BZip2Codec | 输入压缩    | Hadoop使用文件扩展名判断是否支持某种编解码器  |
+| mapreduce.map.output.compress（在mapred-site.xml中配置）     | false                                                        | mapper输出  | 这个参数设为true启用压缩                      |
+| mapreduce.map.output.compress.codec（在mapred-site.xml中配置） | org.apache.hadoop.io.compress.DefaultCodec                   | mapper输出  | 企业多使用LZO或Snappy编解码器在此阶段压缩数据 |
+| mapreduce.output.fileoutputformat.compress（在mapred-site.xml中配置） | false                                                        | reducer输出 | 这个参数设为true启用压缩                      |
+| mapreduce.output.fileoutputformat.compress.codec（在mapred-site.xml中配置） | org.apache.hadoop.io.compress. DefaultCodec                  | reducer输出 | 使用标准工具或者编解码器，如gzip和bzip2       |
+| mapreduce.output.fileoutputformat.compress.type（在mapred-site.xml中配置） | RECORD                                                       | reducer输出 | SequenceFile输出使用的压缩类型：NONE和BLOCK   |
+
+这边就速度来说建议使用 LZO  Snappy  压缩/解压
+
+
+
+#### GZIP
+
+##### 优点：
+
+1. 压缩率高，而且压缩/解压速度比较快。Hadoop本身支持，在应用中处理GZip格式的文件就和直接处理文本一样，大部分linux系统都自带GZip命令，方便
+
+##### 缺点：
+
+不支持split切片
+
+##### 应用场景：
+
+每个文件压缩后在130M以内的，比如说每天的日志文件都压缩成一个GZIP文件
+
+
+
+#### BZip2
+
+##### 优点：
+
+1. 支持Split切片，具有很高的压缩率，比GZip压缩率都高，Hadoop本身自带，使用方便
+
+##### 缺点：
+
+压缩速度很慢
+
+##### 应用场景：
+
+对速度要求不高，带需要较高的压缩率的时候。减少空间占用，又要支持切片Split的时候可以考虑使用BZip2
+
+
+
+#### LZO
+
+##### 优点：
+
+1. 压缩/解压速度比较快
+2. 支持Split
+
+##### 缺点：
+
+压缩率比GZip要低一些，Hadoop本身不支持，需要安装，在应用中对LZO格式的文件需要做一些特殊处理(为了支持Split需要建索引，还需要指定InputFormat为LZO格式)
+
+##### 应用场景：
+
+一个很大的文本文件，压缩后还大于200MB以上的可以考虑，而且单个文件越大，LZO优点越明显
+
+
+
+#### Snappy
+
+##### 优点：
+
+1. 高速压缩速度和合理的压缩率
+
+##### 缺点：
+
+不支持Split，压缩率比GZIP低，Hadoop本身不支持，需要安装
+
+##### 应用场景：
+
+当MapReduce作业的Map输出的数据比较大的时候，作为Map到Reduce的中间数据的压缩格式，或者作为一个MapReduce作业的输出和另外一个MapReduce作业的输入
+
+
+
+### 压缩位置选择
+
+![](http://image.tinx.top/img20210406161017.png)
+
+
+
+## 相关优化
+
+### 数据输入
+
+1. 合并小文件：在执行MR任务前将小文件进行合并，大量的小文件会产生大量的Map任务，增大Map任务装载次数，而任务的状态比较耗时，从而导致MR运行较慢
+2. 采用CombineTextInputFormat来作为输入，解决输入端大量小的文件场景
+
+### Map阶段
+
+1. 减少溢写(Spill）次数：通过调整io.sort.mb及sort.spill.percent参数值，增大触发Spill的内存上线，减少Spill次数，从而减少磁盘IO
+2. 减少合并(Merge)次数：通过调整io.sort.factor参数，增大Merge的文件数目，减少Merge次数，从而缩短MR处理时间。
+3. 在Map之后，不影响业务逻辑的前提下，先进行Combine处理，减少IO
+
+### Reduce阶段
+
+1. 合理设置Map和Reduce数：两个都不能设置太小，也不能设置太多。太少，会导致Task等待，延长处理时间；太多，会导致Map、Reduce任务键竞争资源，造成处理超时等错误
+
+2. 设置Map、Reduce共存：调整showstart.completedmaps参数，使Map运行到一定程度后，Reduce也开始运行，减少Reduce的等待时间
+
+3. 规避使用Reduce: 因为Reduce在用于连接数据集的时候会产生大量的网络消耗
+
+4. 合理的设置Reduce端的buffer: 默认情况下，数据达到一个阈值的时候，Buffer中的数据就会写入磁盘，然后Reduce会从磁盘中获得所有的数据。也就是说Buffer和Reduce是没有直接关联的，中间多次写磁盘->读磁盘的过程，既然有这个弊端，那么就可以通过参数来配置，使得Buffer中的一部分数据可以直接输送到Reduce，从而减少IO开销：
+
+   mapreduce.reduce.input.buffer.percent，默认为0.0当值大于0的时候，会保留指定比例的内存读Buffer中的数据直接拿给Reduce使用，这样一来，设置Buffer需要内存，读取数据需要内存，Reduce计算也要内存，所以要根据作业的运行情况进行调整。
+
+5. IO传输
+
+   1. 采用数据压缩的方式，减少网络IO的时间，安装Snappy和LZO压缩编码器
+   2. 使用SequenceFile二进制文件
+
+6. 数据倾斜
+
+   1. 数据倾斜现象
+
+      1. 数据频率倾斜 - 某一个区域的数据量要远远大于其他区域
+      2. 数据大小倾斜 - 部分记录的大小远远大于平均值
+
+   2. 减少数据倾斜的方法
+
+      1. 抽样和范围分区
+
+         可以通过对原始数据进行抽样得到的结果集来预设分区边界值
+
+      2. 自定义分区
+
+         基于输出键的背景只是进行自定义分区。
+
+      3. Combine
+
+         精简数据，提前"reduce"
+
+      4. 采用Map join ，尽量避免 reduce join
+
+
+
+## 常用的调优参数
+
+| 配置参数                                      | 参数说明                                                     |
+| --------------------------------------------- | ------------------------------------------------------------ |
+| mapreduce.map.memory.mb                       | 一个MapTask可使用的资源上限（单位:MB），默认为1024。如果MapTask实际使用的资源量超过该值，则会被强制杀死。 |
+| mapreduce.reduce.memory.mb                    | 一个ReduceTask可使用的资源上限（单位:MB），默认为1024。如果ReduceTask实际使用的资源量超过该值，则会被强制杀死。 |
+| mapreduce.map.cpu.vcores                      | 每个MapTask可使用的最多cpu core数目，默认值: 1               |
+| mapreduce.reduce.cpu.vcores                   | 每个ReduceTask可使用的最多cpu core数目，默认值: 1            |
+| mapreduce.reduce.shuffle.parallelcopies       | 每个Reduce去Map中取数据的并行数。默认值是5                   |
+| mapreduce.reduce.shuffle.merge.percent        | Buffer中的数据达到多少比例开始写入磁盘。默认值0.66           |
+| mapreduce.reduce.shuffle.input.buffer.percent | Buffer大小占Reduce可用内存的比例。默认值0.7                  |
+| mapreduce.reduce.input.buffer.percent         | 指定多少比例的内存用来存放Buffer中的数据，默认值是0.0        |
+
+
+
+Shuffle性能优化的关键参数，应在YARN启动之前就配置好（mapred-default.xml）
+
+| 配置参数                         | 参数说明                          |
+| -------------------------------- | --------------------------------- |
+| mapreduce.task.io.sort.mb        | Shuffle的环形缓冲区大小，默认100m |
+| mapreduce.map.sort.spill.percent | 环形缓冲区溢出的阈值，默认80%     |
+
+
+
+容错相关参数(MapReduce性能优化)
+
+| 配置参数                     | 参数说明                                                     |
+| ---------------------------- | ------------------------------------------------------------ |
+| mapreduce.map.maxattempts    | 每个Map Task最大重试次数，一旦重试参数超过该值，则认为Map Task运行失败，默认值：4。 |
+| mapreduce.reduce.maxattempts | 每个Reduce Task最大重试次数，一旦重试参数超过该值，则认为Map Task运行失败，默认值：4。 |
+| mapreduce.task.timeout       | Task超时时间，经常需要设置的一个参数，该参数表达的意思为：如果一个Task在一定时间内没有任何进入，即不会读取新的数据，也没有输出数据，则认为该Task处于Block状态，可能是卡住了，也许永远会卡住，为了防止因为用户程序永远Block住不退出，则强制设置了一个该超时时间（单位毫秒），默认是600000。如果你的程序对每条输入数据的处理时间过长（比如会访问数据库，通过网络拉取数据等），建议将该参数调大，该参数过小常出现的错误提示是“AttemptID:attempt_14267829456721_123456_m_000224_0 Timed out after 300 secsContainer killed by the ApplicationMaster.”。 |
+
+
+
+
+
+
+
+
 
