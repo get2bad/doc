@@ -14,6 +14,8 @@
 
 【更新】
 
+2021-04-06 力扣LeetCode 每日一题 [按摩师[<font color=green>简单</font>]](./docs/算法/按摩师.md)
+
 2021-04-02 力扣LeetCode 每日一题 [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
 
 2021-04-01 <font color=blue>愚人节~~</font> [HDFS学习笔记](./docs/大数据/HDFS学习笔记.md)
