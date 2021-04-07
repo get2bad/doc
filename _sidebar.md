@@ -3,6 +3,7 @@
     * [HDFS](./docs/大数据/HDFS.md)
     * [MapReduce](./docs/大数据/MapReduce.md)
     * [Yarn](./docs/大数据/Yarn.md)
+  * [hive](./docs/大数据/hive.md)
 * Java设计模式
   * [设计模式介绍](./docs/设计模式/Java设计模式-介绍.md)
   * [抽象工厂模式](./docs/设计模式/Java设计模式-抽象工厂模式.md)
