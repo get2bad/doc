@@ -14,6 +14,8 @@
 
 【更新】
 
+2021-04-07 力扣LeetCode 动态规划专题 - [最大子序和[<font color=green>简单</font>]](./docs/算法/最大子序和.md)
+
 2021-04-07 大数据 - [hive](./docs/大数据/hive.md)
 
 2021-04-07 力扣LeetCode 动态规划专题 - [最小花费上楼梯[<font color=green>简单</font>]](./docs/算法/最小花费上楼梯.md)

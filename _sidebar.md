@@ -19,6 +19,7 @@
   * [代理模式](./docs/设计模式/Java设计模式-代理模式.md)
 * LeetCode力扣算法
   * 动态规划
+    * [最大子序和[<font color=green>简单</font>]](./docs/算法/最大子序和.md)
     * [最小花费上楼梯[<font color=green>简单</font>]](./docs/算法/最小花费上楼梯.md)
     * [按摩师[<font color=green>简单</font>]](./docs/算法/按摩师.md)
   * 困难
