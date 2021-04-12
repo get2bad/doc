@@ -30,7 +30,7 @@
 
 【更新】
 
-2021-04-12 力扣LeetCode 动态规划专题 - [判断子序列[<font color=green>困难</font>]](./docs/算法/判断子序列.md)
+2021-04-12 力扣LeetCode 动态规划专题 - [判断子序列[<font color=green>简单</font>]](./docs/算法/判断子序列.md)
 
 2021-04-10 大数据 - [clickhouse](./docs/大数据/clickhouse.md)
 
