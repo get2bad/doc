@@ -22,6 +22,7 @@
 * LeetCode力扣算法
   * 动态规划
     * 简单
+        * [判断子序列[<font color=green>简单</font>]](./docs/算法/判断子序列.md)
         * [最大子序和[<font color=green>简单</font>]](./docs/算法/最大子序和.md)
         * [最小花费上楼梯[<font color=green>简单</font>]](./docs/算法/最小花费上楼梯.md)
         * [按摩师[<font color=green>简单</font>]](./docs/算法/按摩师.md)
