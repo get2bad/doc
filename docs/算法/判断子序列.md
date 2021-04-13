@@ -60,7 +60,16 @@ public static boolean isSubsequence(String s, String t) {
   ```res[i][j] = res[i][j - 1]```
 
 ```
-/**
+public static boolean isSubsequence2(String s, String t) {
+    int n = s.length(), m = t.length();
+
+    boolean[][] res = new boolean[n][m + 1];
+    // 将空行置为 true，为了后续双重遍历的依赖
+    for (int i = 0; i < m +1; i++) {
+        res[0][i] = true;
+    }
+
+    /**
      * 核心思想就是，如果当前遍历的字符等于需要查找的字符串，那么就将他左上角的值给现在的值(为了保证有序性)，如果不等于，就将他之前的值赋予
      * 例如：
      *      a   s   d   f   g   结果
