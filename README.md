@@ -30,7 +30,9 @@
 
 【更新】
 
-2021-04-12 力扣LeetCode 动态规划专题 - [购买股票问题[<font color=green>简单</font>]](./docs/算法/购买股票问题.md)
+2021-04-14 力扣LeetCode 动态规划专题 - [不同的路径[<font color=orange>中等</font>]](./docs/算法/不同的路径.md)
+
+2021-04-13 力扣LeetCode 动态规划专题 - [购买股票问题[<font color=green>简单</font>]](./docs/算法/购买股票问题.md)
 
 2021-04-12 力扣LeetCode 动态规划专题 - [判断子序列[<font color=green>简单</font>]](./docs/算法/判断子序列.md)
 
