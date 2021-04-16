@@ -30,6 +30,8 @@
 
 【更新】
 
+2021-04-16 力扣LeetCode 动态规划专题 - [最小路径[<font color=orange>中等</font>]](./docs/算法/最小路径.md)
+
 2021-04-15 力扣LeetCode 动态规划专题 - [最长回文子串[<font color=orange>中等</font>]](./docs/算法/最长回文子串.md)
 
 2021-04-14 力扣LeetCode 动态规划专题 - [不同的路径[<font color=orange>中等</font>]](./docs/算法/不同的路径.md)
