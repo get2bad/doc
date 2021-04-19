@@ -30,7 +30,9 @@
 
 【更新】
 
-2021-04-16 力扣LeetCode 动态规划专题 - [完全平方数[<font color=orange>中等</font>]](./docs/算法/完全平方数.md)
+2021-04-19 力扣LeetCode 动态规划专题 - [不同的路径2[<font color=orange>中等</font>]](./docs/算法/不同的路径.md)
+
+2021-04-17 力扣LeetCode 动态规划专题 - [完全平方数[<font color=orange>中等</font>]](./docs/算法/完全平方数.md)
 
 2021-04-16 力扣LeetCode 动态规划专题 - [最小路径[<font color=orange>中等</font>]](./docs/算法/最小路径.md)
 
