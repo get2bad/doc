@@ -7,11 +7,13 @@
 <hr />
 
 【心里话】<br /><br />
-最近学习完了 python 离线数仓的搭建，感觉大数据就是把组件学会了，其他就是要懂数据要怎么整理的问题，还有重中之重的SQL<br />
+最近把毕业的东西弄得差不多了，公司的新业务也差不多了，接下来就该静下心来好好看点技术类的书籍了，后面的计划是：<br />
++ JVM 虚拟机
++ Netty 网络框架
++ Flink 源码
++ 中间件相关书籍(Kafka、Zookeeper等)
 
-毕业论文最近也写完了(其实就是照抄的那种)，然后在学校知网查重一看 38.5%我都佩服我自己，佛了，慢慢改论文吧。。。
-
-最近的计划就是
+日程计划就是
 + 5月底- 6月初 回学校拿毕业证
 + 6-9月 好好准备 大数据相关面试
 + 9-11月 开始疯狂面试，找一个大数据岗位
@@ -37,11 +39,13 @@
 
 【更新】
 
-2021-05-21 力扣LeetCode 每日一题 [不相交的线[<font color=orange>中等</font>]](./docs/算法/动态规划/不相交的线.md) -- 521来这道题也是没谁了
+2021-05-22 力扣LeetCode 每日一题 [三步问题[<font color=green>简单</font>]](./docs/算法/动态规划/简单/三步问题.md)
+
+2021-05-21 力扣LeetCode 每日一题 [不相交的线[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不相交的线.md) -- 521来这道题也是没谁了
 
 2021-05-19 力扣LeetCode 每日一题 [找出第K大的异或坐标值[<font color=orange>中等</font>]](./docs/算法/异或/找出第K大的异或坐标值.md)
 
-2021-05-17 力扣LeetCode 每日一题 [二叉树的堂兄弟节点[<font color=green>简单</font>]](./docs/算法/二叉树的堂兄弟结点.md)
+2021-05-17 力扣LeetCode 每日一题 [二叉树的堂兄弟节点[<font color=green>简单</font>]](docs/算法/二叉树/简单/二叉树的堂兄弟结点.md)
 
 2021-05-15 力扣LeetCode 每日一题 [无重复字符的最长子串[<font color=orange>中等</font>]](./docs/算法/无重复字符的最长子串.md)
 
@@ -49,39 +53,39 @@
 
 2021-04-21 - 2021-05-14 复习之前做过的算法题
 
-2021-04-20 力扣LeetCode 动态规划专题 - [不同的二叉搜索树[<font color=orange>中等</font>]](./docs/算法/不同的二叉搜索树.md)
+2021-04-20 力扣LeetCode 动态规划专题 - [不同的二叉搜索树[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不同的二叉搜索树.md)
 
-2021-04-19 力扣LeetCode 动态规划专题 - [不同的路径2[<font color=orange>中等</font>]](./docs/算法/不同的路径.md)
+2021-04-19 力扣LeetCode 动态规划专题 - [不同的路径2[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不同的路径.md)
 
-2021-04-17 力扣LeetCode 动态规划专题 - [完全平方数[<font color=orange>中等</font>]](./docs/算法/完全平方数.md)
+2021-04-17 力扣LeetCode 动态规划专题 - [完全平方数[<font color=orange>中等</font>]](docs/算法/动态规划/中等/完全平方数.md)
 
-2021-04-16 力扣LeetCode 动态规划专题 - [最小路径[<font color=orange>中等</font>]](./docs/算法/最小路径.md)
+2021-04-16 力扣LeetCode 动态规划专题 - [最小路径[<font color=orange>中等</font>]](docs/算法/动态规划/中等/最小路径.md)
 
-2021-04-15 力扣LeetCode 动态规划专题 - [最长回文子串[<font color=orange>中等</font>]](./docs/算法/最长回文子串.md)
+2021-04-15 力扣LeetCode 动态规划专题 - [最长回文子串[<font color=orange>中等</font>]](docs/算法/动态规划/中等/最长回文子串.md)
 
-2021-04-14 力扣LeetCode 动态规划专题 - [不同的路径[<font color=orange>中等</font>]](./docs/算法/不同的路径.md)
+2021-04-14 力扣LeetCode 动态规划专题 - [不同的路径[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不同的路径.md)
 
-2021-04-13 力扣LeetCode 动态规划专题 - [购买股票问题[<font color=green>简单</font>]](./docs/算法/购买股票问题.md)
+2021-04-13 力扣LeetCode 动态规划专题 - [购买股票问题[<font color=green>简单</font>]](docs/算法/动态规划/简单/购买股票问题.md)
 
-2021-04-12 力扣LeetCode 动态规划专题 - [判断子序列[<font color=green>简单</font>]](./docs/算法/判断子序列.md)
+2021-04-12 力扣LeetCode 动态规划专题 - [判断子序列[<font color=green>简单</font>]](docs/算法/动态规划/简单/判断子序列.md)
 
 2021-04-10 大数据 - [clickhouse](./docs/大数据/clickhouse.md)
 
 2021-04-10 大数据 - [hbase](./docs/大数据/hbase.md)
 
-2021-04-09 力扣LeetCode 动态规划专题 - [最大正方形[<font color=red>困难</font>]](./docs/算法/最大正方形.md)
+2021-04-09 力扣LeetCode 动态规划专题 - [最大正方形[<font color=red>困难</font>]](docs/算法/动态规划/困难/最大正方形.md)
 
-2021-04-08 力扣LeetCode 动态规划专题 - [最大子序和[<font color=green>简单</font>]](./docs/算法/最大子序和.md)
+2021-04-08 力扣LeetCode 动态规划专题 - [最大子序和[<font color=green>简单</font>]](docs/算法/动态规划/简单/最大子序和.md)
 
 2021-04-07 大数据 - [hive](./docs/大数据/hive.md)
 
-2021-04-07 力扣LeetCode 动态规划专题 - [最小花费上楼梯[<font color=green>简单</font>]](./docs/算法/最小花费上楼梯.md)
+2021-04-07 力扣LeetCode 动态规划专题 - [最小花费上楼梯[<font color=green>简单</font>]](docs/算法/动态规划/简单/最小花费上楼梯.md)
 
 2021-04-06 大数据 - [Yarn](./docs/大数据/Yarn.md)
 
 2021-04-06 大数据 - [MapReduce](./docs/大数据/MapReduce.md)
 
-2021-04-06 力扣LeetCode 动态规划专题 - [按摩师[<font color=green>简单</font>]](./docs/算法/按摩师.md)
+2021-04-06 力扣LeetCode 动态规划专题 - [按摩师[<font color=green>简单</font>]](docs/算法/动态规划/简单/按摩师.md)
 
 2021-04-02 力扣LeetCode 每日一题 [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
 

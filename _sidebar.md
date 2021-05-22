@@ -22,24 +22,25 @@
 * LeetCode力扣算法
   * 动态规划
     * 简单
-        * [购买股票问题[<font color=green>简单</font>]](./docs/算法/购买股票问题.md)
-        * [判断子序列[<font color=green>简单</font>]](./docs/算法/判断子序列.md)
-        * [最大子序和[<font color=green>简单</font>]](./docs/算法/最大子序和.md)
-        * [最小花费上楼梯[<font color=green>简单</font>]](./docs/算法/最小花费上楼梯.md)
-        * [按摩师[<font color=green>简单</font>]](./docs/算法/按摩师.md)
+        * [三步问题[<font color=green>简单</font>]](./docs/算法/动态规划/简单/三步问题.md)
+        * [购买股票问题[<font color=green>简单</font>]](docs/算法/动态规划/简单/购买股票问题.md)
+        * [判断子序列[<font color=green>简单</font>]](docs/算法/动态规划/简单/判断子序列.md)
+        * [最大子序和[<font color=green>简单</font>]](docs/算法/动态规划/简单/最大子序和.md)
+        * [最小花费上楼梯[<font color=green>简单</font>]](docs/算法/动态规划/简单/最小花费上楼梯.md)
+        * [按摩师[<font color=green>简单</font>]](docs/算法/动态规划/简单/按摩师.md)
     * 中等
-        * [不相交的线[<font color=orange>中等</font>]](./docs/算法/动态规划/不相交的线.md)
-        * [不同的二叉搜索树[<font color=orange>中等</font>]](./docs/算法/不同的二叉搜索树.md)
-        * [不同的路径2[<font color=orange>中等</font>]](./docs/算法/不同的路径.md)
-        * [完全平方数[<font color=orange>中等</font>]](./docs/算法/完全平方数.md)
-        * [最小路径[<font color=orange>中等</font>]](./docs/算法/最小路径.md)
-        * [最长回文子串[<font color=orange>中等</font>]](./docs/算法/最长回文子串.md)
-        * [不同的路径[<font color=orange>中等</font>]](./docs/算法/不同的路径.md)
+        * [不相交的线[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不相交的线.md)
+        * [不同的二叉搜索树[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不同的二叉搜索树.md)
+        * [不同的路径2[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不同的路径.md)
+        * [完全平方数[<font color=orange>中等</font>]](docs/算法/动态规划/中等/完全平方数.md)
+        * [最小路径[<font color=orange>中等</font>]](docs/算法/动态规划/中等/最小路径.md)
+        * [最长回文子串[<font color=orange>中等</font>]](docs/算法/动态规划/中等/最长回文子串.md)
+        * [不同的路径[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不同的路径.md)
     * 困难
-        * [最大正方形.md[<font color=red>困难</font>]](./docs/算法/最大正方形.md)
+        * [最大正方形.md[<font color=red>困难</font>]](docs/算法/动态规划/困难/最大正方形.md)
   * 二叉树
     * 简单
-      * [二叉树的堂兄弟节点[<font color=green>简单</font>]](./docs/算法/二叉树的堂兄弟结点.md)
+      * [二叉树的堂兄弟节点[<font color=green>简单</font>]](docs/算法/二叉树/简单/二叉树的堂兄弟结点.md)
   * 困难
     * [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
   * 中等
