@@ -40,6 +40,8 @@
 
 【更新】
 
+2021-05-24 力扣LeetCode 每日一题 [奇怪的打印机[<font color=red>困难</font>]](./docs/算法/动态规划/困难/奇怪的打印机.md)
+
 2021-05-22 力扣LeetCode 每日一题 [三步问题[<font color=green>简单</font>]](./docs/算法/动态规划/简单/三步问题.md)
 
 2021-05-21 力扣LeetCode 每日一题 [不相交的线[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不相交的线.md) -- 521来这道题也是没谁了

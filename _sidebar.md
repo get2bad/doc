@@ -37,6 +37,7 @@
         * [最长回文子串[<font color=orange>中等</font>]](docs/算法/动态规划/中等/最长回文子串.md)
         * [不同的路径[<font color=orange>中等</font>]](docs/算法/动态规划/中等/不同的路径.md)
     * 困难
+        * [奇怪的打印机[<font color=red>困难</font>]](./docs/算法/动态规划/困难/奇怪的打印机.md)
         * [最大正方形.md[<font color=red>困难</font>]](docs/算法/动态规划/困难/最大正方形.md)
   * 二叉树
     * 简单
