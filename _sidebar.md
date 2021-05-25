@@ -22,6 +22,7 @@
 * LeetCode力扣算法
   * 动态规划
     * 简单
+        * [最高有效位[<font color=green>简单</font>]](./docs/算法/动态规划/简单/最高有效位.md)
         * [三步问题[<font color=green>简单</font>]](./docs/算法/动态规划/简单/三步问题.md)
         * [购买股票问题[<font color=green>简单</font>]](docs/算法/动态规划/简单/购买股票问题.md)
         * [判断子序列[<font color=green>简单</font>]](docs/算法/动态规划/简单/判断子序列.md)
