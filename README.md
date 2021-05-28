@@ -40,6 +40,8 @@
 
 【更新】
 
+2021-05-28 力扣LeetCode 每日一题 [汉明距离总和(二进制位差).md[<font color=orange>中等</font>]](./docs/算法/进制/汉明距离总和(二进制位差).md)
+
 2021-05-26 力扣LeetCode 每日一题 [翻转括号字符串[<font color=orange>中等</font>]](./docs/算法/翻转括号字符串.md)
 
 2021-05-25 力扣LeetCode [最高有效位[<font color=green>简单</font>]](./docs/算法/动态规划/简单/最高有效位.md)

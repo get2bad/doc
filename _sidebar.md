@@ -46,6 +46,7 @@
   * 困难
     * [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
   * 中等
+    * [汉明距离总和(二进制位差).md[<font color=orange>中等</font>]](./docs/算法/进制/汉明距离总和(二进制位差).md)
     * [翻转括号字符串[<font color=orange>中等</font>]](./docs/算法/翻转括号字符串.md)
     * [找出第K大的异或坐标值[<font color=orange>中等</font>]](./docs/算法/异或/找出第K大的异或坐标值.md)
     * [罗马文[<font color=orange>中等</font>]](./docs/算法/罗马文问题.md)
