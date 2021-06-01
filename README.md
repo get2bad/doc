@@ -40,6 +40,8 @@
 
 【更新】
 
+2021-06-01 力扣LeetCode 每日一题 [在最喜欢的天中吃到最喜欢的糖果[<font color=orange>中等</font>]](./docs/算法/前缀和/在最喜欢的天中吃到最喜欢的糖果.md) 儿童节，大朋友们，大家过不过 /doge
+
 2021-05-31 力扣LeetCode 每日一题 [4的次幂[<font color=green>简单</font>]](./docs/算法/进制/4的次幂.md)
 
 2021-05-28 力扣LeetCode 每日一题 [汉明距离总和(二进制位差).md[<font color=orange>中等</font>]](./docs/算法/进制/汉明距离总和(二进制位差).md)
