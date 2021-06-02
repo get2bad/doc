@@ -8,11 +8,11 @@
 
 【心里话】<br /><br />
 最近把毕业的东西弄得差不多了，公司的新业务也差不多了，接下来就该静下心来好好看点技术类的书籍了，后面的计划是：<br />
-+ JVM 虚拟机
-+ Thread 线程池应用
-+ Netty 网络框架
-+ Flink 源码
-+ 中间件相关书籍(Kafka、Zookeeper等)
++ JVM 虚拟机 <small><font color=red>进度(50%)</font></small>
++ Thread 线程池应用 <small><font color=red>进度(0%)</font></small>
++ Netty 网络框架 <small><font color=red>进度(0%)</font></small>
++ Flink 源码 <small><font color=red>进度(0%)</font></small>
++ 中间件相关书籍(Kafka、Zookeeper等) <small><font color=red>进度(0%)</font></small>
 
 日程计划就是
 + 5月底- 6月初 回学校拿毕业证
@@ -39,6 +39,8 @@
 <hr />
 
 【更新】
+
+2021-06-02 力扣LeetCode 每日一题 [连续子数组和[<font color=orange>中等</font>]](./docs/算法/前缀和/连续子数组和.md)
 
 2021-06-01 力扣LeetCode 每日一题 [在最喜欢的天中吃到最喜欢的糖果[<font color=orange>中等</font>]](./docs/算法/前缀和/在最喜欢的天中吃到最喜欢的糖果.md) 儿童节，大朋友们，大家过不过 /doge
 
