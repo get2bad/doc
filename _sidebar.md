@@ -61,6 +61,7 @@
     * [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
     * [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
   * 简单
+    * [删除目标链表元素[<font color=green>简单</font>]](./docs/算法/链表/删除目标链表元素.md)
     * [相交的链表[<font color=green>简单</font>]](./docs/算法/链表/相交的链表.md)
     * [4的次幂[<font color=green>简单</font>]](./docs/算法/进制/4的次幂.md)
     * [数组的度[<font color=green>简单</font>]](./docs/算法/数组的度.md)

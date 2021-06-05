@@ -40,6 +40,8 @@
 
 【更新】
 
+2021-06-05 力扣LeetCode 每日一题 [删除目标链表元素[<font color=green>简单</font>]](./docs/算法/链表/删除目标链表元素.md)
+
 2021-06-04 力扣LeetCode 每日一题 [相交的链表[<font color=green>简单</font>]](./docs/算法/链表/相交的链表.md)
 
 2021-06-03 力扣LeetCode 每日一题 [连续数组[<font color=orange>中等</font>]](./docs/算法/前缀和/连续数组.md#连续数组) 昨天的回顾温习
