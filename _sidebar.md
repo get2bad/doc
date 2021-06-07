@@ -47,6 +47,8 @@
   * 困难
     * [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
   * 中等
+    * [目标和[<font color=orange>中等</font>]](./docs/算法/回溯/中等/目标和.md)
+    * [连续数组[<font color=orange>中等</font>]](./docs/算法/前缀和/连续数组.md#连续数组)
     * [连续数组[<font color=orange>中等</font>]](./docs/算法/前缀和/连续数组.md#连续数组)
     * [连续子数组和[<font color=orange>中等</font>]](./docs/算法/前缀和/连续数组.md#连续的子数组和)
     * [在最喜欢的天中吃到最喜欢的糖果[<font color=orange>中等</font>]](./docs/算法/前缀和/在最喜欢的天中吃到最喜欢的糖果.md)
