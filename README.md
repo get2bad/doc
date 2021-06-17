@@ -40,6 +40,8 @@
 
 【更新】
 
+2021-06-17 力扣LeetCode 每日一题 [有效数字[<font color=red>困难</font>]](./docs/算法/有效数字.md)
+
 2021-06-07 力扣LeetCode 每日一题 [目标和[<font color=orange>中等</font>]](./docs/算法/回溯/中等/目标和.md)
 
 2021-06-06 力扣LeetCode 每日一题 [1和0[<font color=orange>中等</font>]](./docs/算法/动态规划/中等/1和0.md)

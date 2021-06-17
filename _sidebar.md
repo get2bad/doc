@@ -45,6 +45,7 @@
     * 简单
       * [二叉树的堂兄弟节点[<font color=green>简单</font>]](docs/算法/二叉树/简单/二叉树的堂兄弟结点.md)
   * 困难
+    * [有效数字[<font color=red>困难</font>]](./docs/算法/有效数字.md)
     * [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
   * 中等
     * [目标和[<font color=orange>中等</font>]](./docs/算法/回溯/中等/目标和.md)
