@@ -44,6 +44,9 @@
   * 二叉树
     * 简单
       * [二叉树的堂兄弟节点[<font color=green>简单</font>]](docs/算法/二叉树/简单/二叉树的堂兄弟结点.md)
+  * 二分法
+    * 简单
+      * [第一个错误版本[<font color=green>简单</font>]](docs/算法/二分法/简单/第一个错误版本.md)
   * 困难
     * [有效数字[<font color=red>困难</font>]](./docs/算法/有效数字.md)
     * [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
