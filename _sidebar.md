@@ -51,6 +51,7 @@
     * [有效数字[<font color=red>困难</font>]](./docs/算法/有效数字.md)
     * [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
   * 中等
+    * [01矩阵[<font color=orange>中等</font>]](./docs/算法/矩阵/01矩阵.md)
     * [目标和[<font color=orange>中等</font>]](./docs/算法/回溯/中等/目标和.md)
     * [连续数组[<font color=orange>中等</font>]](./docs/算法/前缀和/连续数组.md#连续数组)
     * [连续数组[<font color=orange>中等</font>]](./docs/算法/前缀和/连续数组.md#连续数组)
