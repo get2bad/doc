@@ -40,6 +40,8 @@
 
 【更新】
 
+2021-06-23 力扣LeetCode 每日一题 [二进制1的个数[<font color=green>简单</font>]](./docs/算法/二进制1的个数.md)
+
 2021-06-22 力扣LeetCode 每日一题 [01矩阵[<font color=orange>中等</font>]](./docs/算法/矩阵/01矩阵.md)
 
 2021-06-21 力扣LeetCode 每日一题 [二进制手表[<font color=green>简单</font>]](./docs/算法/二进制手表.md)
