@@ -8,14 +8,13 @@
 
 【心里话】<br /><br />
 最近把毕业的东西弄得差不多了，公司的新业务也差不多了，接下来就该静下心来好好看点技术类的书籍了，后面的计划是：<br />
-+ JVM 虚拟机 <small><font color=red>进度(50%)</font></small>
-+ Thread 线程池应用 <small><font color=red>进度(0%)</font></small>
-+ Netty 网络框架 <small><font color=red>进度(0%)</font></small>
++ JVM 虚拟机 <small><font color=red>进度(70%)</font></small>
++ Thread 线程池应用 <small><font color=red>进度(20%)</font></small>
++ Netty 网络框架 <small><font color=red>进度(30%)</font></small>
 + Flink 源码 <small><font color=red>进度(0%)</font></small>
 + 中间件相关书籍(Kafka、Zookeeper等) <small><font color=red>进度(0%)</font></small>
 
 日程计划就是
-+ 5月底- 6月初 回学校拿毕业证
 + 6-9月 好好准备 大数据相关面试
 + 9-11月 开始疯狂面试，找一个大数据岗位
 
@@ -40,11 +39,13 @@
 
 【更新】
 
-2021-06-23 力扣LeetCode 每日一题 [二进制1的个数[<font color=green>简单</font>]](./docs/算法/二进制1的个数.md)
+2021-06-24 力扣LeetCode 每日一题 [直线上最多的点[<font color=red>困难</font>]](./docs/算法/哈希表/直线上最多的点.md)
+
+2021-06-23 力扣LeetCode 每日一题 [二进制1的个数[<font color=green>简单</font>]](docs/算法/二进制/二进制1的个数.md)
 
 2021-06-22 力扣LeetCode 每日一题 [01矩阵[<font color=orange>中等</font>]](./docs/算法/矩阵/01矩阵.md)
 
-2021-06-21 力扣LeetCode 每日一题 [二进制手表[<font color=green>简单</font>]](./docs/算法/二进制手表.md)
+2021-06-21 力扣LeetCode 每日一题 [二进制手表[<font color=green>简单</font>]](docs/算法/二进制/二进制手表.md)
 
 2021-06-18 力扣LeetCode 二分法专练 [第一个错误版本[<font color=green>简单</font>]](docs/算法/二分法/简单/第一个错误版本.md)
 
@@ -130,7 +131,7 @@
 
 2021-03-31 力扣LeetCode 每日一题 [子集II[<font color=orange>中等</font>]](./docs/算法/子集II.md)
 
-2021-03-30 力扣LeetCode [搜索二维矩阵[<font color=orange>中等</font>]](./docs/算法/搜索二维矩阵.md)
+2021-03-30 力扣LeetCode [搜索二维矩阵[<font color=orange>中等</font>]](docs/算法/矩阵/搜索二维矩阵.md)
 
 2021-03-29 力扣LeetCode [数组的度[<font color=green>简单</font>]](./docs/算法/数组的度.md)
 
@@ -152,5 +153,5 @@
 
 2021-03-22 力扣LeetCode 每日一题 [同构字符串[<font color=green>简单</font>]](./docs/算法/同构字符串.md)
 
-2021-03-21 力扣LeetCode 每日一题 [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
+2021-03-21 力扣LeetCode 每日一题 [矩阵置0[<font color=orange>中等</font>]](docs/算法/矩阵/矩阵置0.md)
 

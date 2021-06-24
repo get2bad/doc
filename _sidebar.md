@@ -48,6 +48,7 @@
     * 简单
       * [第一个错误版本[<font color=green>简单</font>]](docs/算法/二分法/简单/第一个错误版本.md)
   * 困难
+    * [直线上最多的点[<font color=red>困难</font>]](./docs/算法/哈希表/直线上最多的点.md)
     * [有效数字[<font color=red>困难</font>]](./docs/算法/有效数字.md)
     * [接雨直方图[<font color=red>困难</font>]](./docs/算法/接雨直方图.md)
   * 中等
@@ -63,14 +64,14 @@
     * [罗马文[<font color=orange>中等</font>]](./docs/算法/罗马文问题.md)
     * [笨阶乘[<font color=orange>中等</font>]](./docs/算法/笨阶乘.md)
     * [子集II[<font color=orange>中等</font>]](./docs/算法/子集II.md)
-    * [搜索二维矩阵[<font color=orange>中等</font>]](./docs/算法/搜索二维矩阵.md)
+    * [搜索二维矩阵[<font color=orange>中等</font>]](docs/算法/矩阵/搜索二维矩阵.md)
     * [删除排序链表中的重复元素II[<font color=orange>中等</font>]](./docs/算法/删除排序链表中的重复元素.md)
     * [132模式[<font color=orange>中等</font>]](./docs/算法/132模式.md)
-    * [矩阵置0[<font color=orange>中等</font>]](./docs/算法/矩阵置0.md)
+    * [矩阵置0[<font color=orange>中等</font>]](docs/算法/矩阵/矩阵置0.md)
     * [扁平化嵌套列表迭代器[<font color=orange>中等</font>]](./docs/算法/扁平化嵌套列表迭代器.md)
   * 简单
-    * [二进制1的个数[<font color=green>简单</font>]](./docs/算法/二进制1的个数.md)
-    * [二进制手表[<font color=green>简单</font>]](./docs/算法/二进制手表.md)
+    * [二进制1的个数[<font color=green>简单</font>]](docs/算法/二进制/二进制1的个数.md)
+    * [二进制手表[<font color=green>简单</font>]](docs/算法/二进制/二进制手表.md)
     * [删除目标链表元素[<font color=green>简单</font>]](./docs/算法/链表/删除目标链表元素.md)
     * [相交的链表[<font color=green>简单</font>]](./docs/算法/链表/相交的链表.md)
     * [4的次幂[<font color=green>简单</font>]](./docs/算法/进制/4的次幂.md)
