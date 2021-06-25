@@ -39,6 +39,8 @@
 
 【更新】
 
+2021-06-25 力扣LeetCode 每日一题 [打开转盘锁[<font color=orange>中等</font>]](./docs/算法/打开转盘锁.md)
+
 2021-06-24 力扣LeetCode 每日一题 [直线上最多的点[<font color=red>困难</font>]](./docs/算法/哈希表/直线上最多的点.md)
 
 2021-06-23 力扣LeetCode 每日一题 [二进制1的个数[<font color=green>简单</font>]](docs/算法/二进制/二进制1的个数.md)
