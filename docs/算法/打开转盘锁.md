@@ -214,6 +214,54 @@ private static int update(Deque<String> deque, Map<String, Integer> cur, Map<Str
 
 也是类似于BFS，但是在BFS的基础上，进行了相关的优化，对于无关的步骤，进行了简略
 
+A*算法通过下面这个函数来计算每个节点的优先级:
+
+![](http://image.tinx.top/20210625164829.png)
+
+其中：
+
+- f(n)是节点n的综合优先级。当我们选择下一个要遍历的节点时，我们总会选取综合优先级最高（值最小）的节点。
+- g(n) 是节点n距离起点的代价。
+- h(n)是节点n距离终点的预计代价，这也就是A*算法的启发函数。
+
+f(n) 方法体为：
+
+```java
+static int f(String str) {
+    int ans = 0;
+    for (int i = 0; i < 4; i++) {
+        int cur = str.charAt(i) - '0', target = t.charAt(i) - '0';
+        int a = Math.min(cur, target), b = Math.max(cur, target);
+        // 在「正向转」和「反向转」之间取 min
+      	// b - a 是节点距离起点的代价
+      	// a + 10 - b 是节点n距离重点的预计代价 
+        int min = Math.min(b - a, a + 10 - b);
+        ans += min;
+    }
+    return ans;
+}
+```
+
+完整的A*算法描述如下：
+
+```text
+* 初始化open_set和close_set；
+* 将起点加入open_set中，并设置优先级为0（优先级最高）；
+* 如果open_set不为空，则从open_set中选取优先级最高的节点n：
+    * 如果节点n为终点，则：
+        * 从终点开始逐步追踪parent节点，一直达到起点；
+        * 返回找到的结果路径，算法结束；
+    * 如果节点n不是终点，则：
+        * 将节点n从open_set中删除，并加入close_set中；
+        * 遍历节点n所有的邻近节点：
+            * 如果邻近节点m在close_set中，则：
+                * 跳过，选取下一个邻近节点
+            * 如果邻近节点m也不在open_set中，则：
+                * 设置节点m的parent为节点n
+                * 计算节点m的优先级
+                * 将节点m加入open_set中
+```
+
 
 
 ```java
@@ -248,7 +296,7 @@ static int f(String str) {
     return ans;
 }
 
-public static int openLock1(String[] deadends, String target) {
+public static int openLock(String[] deadends, String target) {
     s = "0000";
     t = target;
     if (s.equals(t)) {
