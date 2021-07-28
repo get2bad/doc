@@ -8,8 +8,8 @@
 
 【心里话】<br /><br />
 最近把毕业的东西弄得差不多了，公司的新业务也差不多了，接下来就该静下心来好好看点技术类的书籍了，后面的计划是：<br />
-+ JVM 虚拟机 <small><font color=red>进度(70%)</font></small>
-+ Thread 线程池应用 <small><font color=red>进度(20%)</font></small>
++ JVM 虚拟机 <small><font color=red>进度(90%)</font></small>
++ Thread 线程池应用 <small><font color=red>进度(60%)</font></small>
 + Netty 网络框架 <small><font color=red>进度(30%)</font></small>
 + Flink 源码 <small><font color=red>进度(0%)</font></small>
 + 中间件相关书籍(Kafka、Zookeeper等) <small><font color=red>进度(0%)</font></small>
@@ -23,7 +23,7 @@
 
 说实话，最近好累，等毕业了，跳槽到大数据那边以后，真的要休息一年了，从大学开始这几年就没停止过学习，真的有点累了，给自己的心放个假吧
 
-毕业期望薪资 <font color=red>16-18K</font>，祝我好运
+毕业薪资已经<font color=red>14K</font>，希望下次跳槽薪资在 <font color=red>18K左右</font>，祝我好运
 
 <font color=orange>加油，我相信最终的结果不会辜负我的努力。</font>
 
