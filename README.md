@@ -6,24 +6,20 @@
 
 <hr />
 
-【心里话】<br /><br />
-最近把毕业的东西弄得差不多了，公司的新业务也差不多了，接下来就该静下心来好好看点技术类的书籍了，后面的计划是：<br />
-+ JVM 虚拟机 <small><font color=red>进度(70%)</font></small>
-+ Thread 线程池应用 <small><font color=red>进度(20%)</font></small>
-+ Netty 网络框架 <small><font color=red>进度(30%)</font></small>
-+ Flink 源码 <small><font color=red>进度(0%)</font></small>
-+ 中间件相关书籍(Kafka、Zookeeper等) <small><font color=red>进度(0%)</font></small>
+【心里话】<br /><br />回来了，沉默了半年，说实话，最近很迷茫，心很乱，动力全无，哎，继续恢复慢慢每天一道算法题吧，先以复习为主，明年三四月找一找新的工作机会，看看工资能不能上去个20k，加油吧💪🏻！<br />
++ Java集合框架源码<small><font color=red>进度(100%)</font></small>
++ JVM 虚拟机 <small><font color=red>进度(100%)</font></small>
++ Thread 线程池应用 <small><font color=red>进度(100%)</font></small>
++ 反射及代理 <small><font color=red>进度(0%)</font></small>
++ SpringBoot框架系列 <small><font color=red>进度(20%)</font></small>
++ Cloud微服务系列 <small><font color=red>进度(0%)</font></small>
++ 中间件相关书籍(Redis、Mysql等) <small><font color=red>进度(0%)</font></small>
 
 日程计划就是
-+ 6-9月 好好准备 大数据相关面试
-+ 9-11月 开始疯狂面试，找一个大数据岗位
++ 每天一道算法题
++ 每天工作空闲之余，看技术文档
 
-  小目标： 薪资16-18k<br />
-  公司规模：至少500人以上（为阿里p7岗位做个跳板）
-
-说实话，最近好累，等毕业了，跳槽到大数据那边以后，真的要休息一年了，从大学开始这几年就没停止过学习，真的有点累了，给自己的心放个假吧
-
-毕业期望薪资 <font color=red>16-18K</font>，祝我好运
+现薪资已16.8K，明年期望薪资<font color=red>20 -23K</font>，祝我好运
 
 <font color=orange>加油，我相信最终的结果不会辜负我的努力。</font>
 
@@ -38,6 +34,12 @@
 <hr />
 
 【更新】
+
+2021-12-22 Java学习笔记 [JUC](./docs/Java/JUC.md)
+
+2021-12-22 Java学习笔记 [Java集合框架](./docs/Java/Java集合.md)
+
+2021-12-22 Java学习笔记 [JVM](./docs/Java/JVM.md)
 
 2021-06-25 力扣LeetCode 每日一题 [打开转盘锁[<font color=orange>中等</font>]](./docs/算法/打开转盘锁.md)
 
